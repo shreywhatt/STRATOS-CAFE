@@ -28,9 +28,10 @@ class _MainFoodPageState extends State<MainFoodPage> {
                 children: [
                   Column(
                     children: [
-                      BigTexts(text: "BANGLADESH", color: AppColors.mainColor,size: 25,),
+                      BigTexts(text: "INDIA", color: AppColors.mainColor,size: 25,),
                       Row(
                         children: [
+
                           SmallTexts(text: "Pune", color: Colors.black),
                           Icon(Icons.arrow_drop_down_rounded)
                         ],
