@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:stratos_cafe/home/food_page_body.dart';
 import 'package:stratos_cafe/utils/colors.dart';
+import 'package:stratos_cafe/utils/dimensions.dart';
 import 'package:stratos_cafe/widgets/big_texts.dart';
 import 'package:stratos_cafe/widgets/small_texts.dart';
 
@@ -15,6 +16,7 @@ class MainFoodPage extends StatefulWidget {
 class _MainFoodPageState extends State<MainFoodPage> {
   @override
   Widget build(BuildContext context) {
+    print("current height is${MediaQuery.of(context).size.height}");
     return Scaffold(
       body: Column(
         children: [
@@ -56,6 +58,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
             ),
           ),
           FoodPageBody(),
+
         ],
 
 

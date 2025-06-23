@@ -2,6 +2,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:stratos_cafe/utils/colors.dart';
+import 'package:stratos_cafe/utils/dimensions.dart';
 import 'package:stratos_cafe/widgets/big_texts.dart';
 import 'package:stratos_cafe/widgets/small_texts.dart';
 
@@ -19,7 +20,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
   //to make the sliding boxes big and small during scrolling
   var _currPageValue=0.0;
   double _scaleFactor=0.8;
-  double _height = 220;
+  double _height = Dimensions.pageViewContainer;
   @override
   void initState(){
     super.initState();
@@ -53,11 +54,12 @@ class _FoodPageBodyState extends State<FoodPageBody> {
         dotsCount: 5,
         position: _currPageValue,
         decorator: DotsDecorator(
+        activeColor: AppColors.mainColor,
         size: const Size.square(9.0),
         activeSize: const Size(18.0, 9.0),
         activeShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
         ),
-        );
+    ),
         //color: Colors.redAccent,
 
       ],
@@ -97,7 +99,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
         children: [
           //bigger box
           Container(
-            height: 220,
+            height: Dimensions.pageViewContainer,
             //bigger box margin
             margin: EdgeInsets.only(left: 10, right: 10, top: 10),
             decoration: BoxDecoration(
@@ -112,7 +114,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              height: 120,
+              height: Dimensions.pageViewTextContainer,
               margin: EdgeInsets.only(left: 30, right: 30, bottom: 15),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
