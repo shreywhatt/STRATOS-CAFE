@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:stratos_cafe/utils/colors.dart';
+import 'package:stratos_cafe/widgets/big_texts.dart';
 
 class MainFoodPage extends StatefulWidget {
   const MainFoodPage({super.key});
@@ -25,7 +26,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
                 children: [
                   Column(
                     children: [
-                      Text("Country"),
+                      BigTexts(text: "BANGLADESH", color: AppColors.mainColor,size: 25,),
                       Text("City"),
 
                     ],
