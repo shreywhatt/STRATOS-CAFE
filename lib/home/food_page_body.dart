@@ -19,8 +19,8 @@ class _FoodPageBodyState extends State<FoodPageBody> {
   PageController pageController = PageController(viewportFraction: 0.9);
   //to make the sliding boxes big and small during scrolling
   var _currPageValue=0.0;
-  double _scaleFactor=0.8;
-  double _height = Dimensions.pageViewContainer;
+  final double _scaleFactor=0.8;
+  final double _height = Dimensions.pageViewContainer;
   @override
   void initState(){
     super.initState();
@@ -36,13 +36,14 @@ class _FoodPageBodyState extends State<FoodPageBody> {
   @override
   void dispose(){
     pageController.dispose();
+    super.dispose();
   }
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          height: 320,
+        SizedBox(
+          height: Dimensions.pageView,
           child: PageView.builder(
               controller: pageController,
               itemCount: 5,
@@ -57,7 +58,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
         activeColor: AppColors.mainColor,
         size: const Size.square(9.0),
         activeSize: const Size(18.0, 9.0),
-        activeShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
+        activeShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(Dimensions.radius5)),
         ),
     ),
         //color: Colors.redAccent,
@@ -101,9 +102,9 @@ class _FoodPageBodyState extends State<FoodPageBody> {
           Container(
             height: Dimensions.pageViewContainer,
             //bigger box margin
-            margin: EdgeInsets.only(left: 10, right: 10, top: 10),
+            margin: EdgeInsets.only(left: Dimensions.width10, right: Dimensions.width10, top: Dimensions.height10),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
+                borderRadius: BorderRadius.circular(Dimensions.radius30),
                 color: index.isEven?Color(0xFF69c5df): Color(0xFF9294cc),
                 image: DecorationImage(
                   image: AssetImage("assets/image/food0.png"),
@@ -115,14 +116,14 @@ class _FoodPageBodyState extends State<FoodPageBody> {
             alignment: Alignment.bottomCenter,
             child: Container(
               height: Dimensions.pageViewTextContainer,
-              margin: EdgeInsets.only(left: 30, right: 30, bottom: 15),
+              margin: EdgeInsets.only(left: Dimensions.width30, right: Dimensions.width30, bottom: Dimensions.height30),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
+                borderRadius: BorderRadius.circular(Dimensions.radius30),
                 color: Colors.white,
                 boxShadow: [
                   BoxShadow(
                     color: Color(0xFFe8e8e8),
-                    blurRadius: 5.0,
+                    blurRadius: Dimensions.radius5,
                     offset: Offset(0, 5)
 ,                  ),
                   BoxShadow(
@@ -139,28 +140,28 @@ class _FoodPageBodyState extends State<FoodPageBody> {
               //smaller box
               child: Container(
                 //smaller box margin
-                padding: EdgeInsets.only(top: 15, left: 30, right: 30),
+                padding: EdgeInsets.only(top: Dimensions.height15, left: Dimensions.width30, right: Dimensions.width30),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     BigTexts(text: "MAHARASHTRIAN SPICE", ),
-                    SizedBox(height: 10,),
+                    SizedBox(height: Dimensions.height10,),
                     Row(
                       children: [
 
                         Wrap(
                           children: List.generate(5, (index) => Icon(Icons.star, color: AppColors.mainColor)),
                         ),
-                        SizedBox(width: 10,),
+                        SizedBox(width: Dimensions.width10,),
                         SmallTexts(text: "4.5"),
-                        SizedBox(width: 10,),
+                        SizedBox(width: Dimensions.width10,),
                         SmallTexts(text: "1287 "),
                         SmallTexts(text: "Comments"),
                       ],
                     ),
 
                     //third row of smaller box having three more columns - location time etc
-                    SizedBox(height: 20,),
+                    SizedBox(height: Dimensions.height20,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
