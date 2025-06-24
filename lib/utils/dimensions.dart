@@ -5,7 +5,7 @@ class Dimensions{
 
   static double pageView = screenHeight/2.857;
   static double pageViewContainer = screenHeight/4.126;
-  static double pageViewTextContainer = screenHeight/7.62;
+  static double pageViewTextContainer = screenHeight/6.5;
 
   //dynamic height padding and margin
   static double height10 = screenHeight/91.42;
@@ -29,6 +29,8 @@ class Dimensions{
   static double radius20 = screenHeight/45.714;
   static double radius30 = screenHeight/30.48;
 
+  //iconsize
+  static double iconsize24 = screenHeight/38.1;
 
 
 

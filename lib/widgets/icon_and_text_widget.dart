@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:stratos_cafe/utils/dimensions.dart';
 import 'package:stratos_cafe/widgets/small_texts.dart';
 
 class IconAndTextWidget extends StatelessWidget {
@@ -16,7 +17,7 @@ class IconAndTextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(icon, color: iconColor,),
+        Icon(icon, color: iconColor, size: Dimensions.iconsize24,),
         SizedBox(width: 5,),
         SmallTexts(text: text,),
 

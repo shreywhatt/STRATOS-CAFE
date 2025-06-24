@@ -23,7 +23,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
           Container(
 
             child: Container(
-              margin: EdgeInsets.only(top:45, bottom: 15 ),
+              margin: EdgeInsets.only(top:Dimensions.height45, bottom: Dimensions.height15 ),
               padding: EdgeInsets.only(left: Dimensions.width20, right: Dimensions.width20, ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -49,7 +49,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
                           color: AppColors.mainColor,
 
                       ),
-                      child: Icon(Icons.search, color: Colors.white),
+                      child: Icon(Icons.search, color: Colors.white, size: Dimensions.iconsize24,),
                     ),
                   )
 

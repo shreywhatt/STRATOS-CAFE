@@ -42,6 +42,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        //slider section the topmost one that took 2.5 hours but 3 days
         SizedBox(
           height: Dimensions.pageView,
           child: PageView.builder(
@@ -62,9 +63,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
         ),
     ),
         //color: Colors.redAccent,
-
       ],
-
     );
   }
   Widget _buildPageItem(int index)
@@ -147,8 +146,9 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                     BigTexts(text: "MAHARASHTRIAN SPICE", ),
                     SizedBox(height: Dimensions.height10,),
                     Row(
+                      //rating stars and comments etc
                       children: [
-
+                        //rating stars comments etc
                         Wrap(
                           children: List.generate(5, (index) => Icon(Icons.star, color: AppColors.mainColor)),
                         ),
