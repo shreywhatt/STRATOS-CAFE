@@ -62,7 +62,59 @@ class _FoodPageBodyState extends State<FoodPageBody> {
         activeShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(Dimensions.radius5)),
         ),
     ),
-        //color: Colors.redAccent,
+
+        //Popolar Text box with food pairing
+        SizedBox(height: Dimensions.height30,),
+        Container(
+          margin: EdgeInsets.only(left: Dimensions.width30),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              BigTexts(text: "Popular"),
+              SizedBox(width: Dimensions.width10,),
+              Container(
+                margin: const EdgeInsets.only(bottom: 3),
+                child: BigTexts(text: ".", color: Colors.black26,),
+              ),
+              SizedBox(width: Dimensions.width10,),
+              Container(
+                margin: const EdgeInsets.only(bottom: 3),
+                child: SmallTexts(text: "Food Pairing",),
+              )
+              
+            ],
+          ),
+        ),
+
+        //List of Foods and images
+        Container(
+          height: 700,
+          child: ListView.builder(
+            physics: NeverScrollableScrollPhysics(),
+            //shrinkWrap: true,
+              itemCount: 10,
+              itemBuilder: (context, index){
+                return Container(
+                  margin: EdgeInsets.only(left: Dimensions.width10, right: Dimensions.width10,),
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 120,
+                        height: 120,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(Dimensions.radius20),
+                            color: Colors.white38,
+                            image: DecorationImage(image: AssetImage("assets/image/food0.png"))
+
+                        ),
+                      )
+                    ],
+                  ),
+                );
+
+              }),
+        )
+
       ],
     );
   }
