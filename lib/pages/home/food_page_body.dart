@@ -5,7 +5,8 @@ import 'package:stratos_cafe/utils/colors.dart';
 import 'package:stratos_cafe/utils/dimensions.dart';
 import 'package:stratos_cafe/widgets/big_texts.dart';
 import 'package:stratos_cafe/widgets/small_texts.dart';
-import '../widgets/icon_and_text_widget.dart';
+import '../../widgets/icon_and_text_widget.dart';
+
 
 class FoodPageBody extends StatefulWidget {
   const FoodPageBody({super.key});
