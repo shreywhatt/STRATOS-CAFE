@@ -1,10 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:stratos_cafe/home/food_page_body.dart';
 import 'package:stratos_cafe/utils/colors.dart';
 import 'package:stratos_cafe/utils/dimensions.dart';
 import 'package:stratos_cafe/widgets/big_texts.dart';
 import 'package:stratos_cafe/widgets/small_texts.dart';
+
+import 'food_page_body.dart';
 
 class MainFoodPage extends StatefulWidget {
   const MainFoodPage({super.key});
