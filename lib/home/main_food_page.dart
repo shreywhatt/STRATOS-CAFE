@@ -16,7 +16,14 @@ class MainFoodPage extends StatefulWidget {
 class _MainFoodPageState extends State<MainFoodPage> {
   @override
   Widget build(BuildContext context) {
-    print("current height is${MediaQuery.of(context).size.height}");
+    // Get screen dimensions
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
+
+    // Print to console
+    print('Screen Width: $screenWidth');
+    print('Screen Height: $screenHeight');
+
     return Scaffold(
       body: Column(
         children: [

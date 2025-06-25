@@ -86,36 +86,79 @@ class _FoodPageBodyState extends State<FoodPageBody> {
           ),
         ),
 
-        //List of Foods and images
-        Container(
-          height: 700,
-          child: ListView.builder(
+        // Parent Container for Popular List of Foods and images
+
+    ListView.builder(
             physics: NeverScrollableScrollPhysics(),
-            //shrinkWrap: true,
+            shrinkWrap: true,
               itemCount: 10,
               itemBuilder: (context, index){
                 return Container(
                   margin: EdgeInsets.only(left: Dimensions.width10, right: Dimensions.width10,),
                   child: Row(
                     children: [
+                      //Container for the items under popular food pairing section
                       Container(
-                        width: 120,
-                        height: 120,
+                        margin: EdgeInsets.only(left: Dimensions.width5),
+                        width:  Dimensions.listViewImgSize,
+                        height: Dimensions.listViewImgSize,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(Dimensions.radius20),
                             color: Colors.white38,
                             image: DecorationImage(image: AssetImage("assets/image/food0.png"))
 
                         ),
-                      )
+                      ),
+
+                      //Text container for the food items under the Popular section
+                      Expanded(
+                          child: Container(
+                              height: Dimensions.listViewTextContSize,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(Dimensions.radius20),
+                                bottomRight: Radius.circular(Dimensions.radius20)
+                            ),
+                            color: Colors.white,
+                          ),
+                          child: Padding(padding: EdgeInsets.only(
+                              left: Dimensions.width10, top: Dimensions.height10, right: Dimensions.width5),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+
+                              children: [
+                                BigTexts(text: "Kolhapuri Misal in Ahmednagar"),
+                                SizedBox(height: Dimensions.height10,),
+                                SmallTexts(text: "With special kolhapuri black masala"),
+                                SizedBox(height: Dimensions.height10,),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    IconAndTextWidget(icon: Icons.circle_sharp,
+                                      text: "1.7km",
+                                      iconColor: AppColors.iconColor1,),
+                                    IconAndTextWidget(icon: Icons.location_on,
+                                      text: "Normal",
+                                      iconColor: AppColors.mainColor,),
+                                    IconAndTextWidget(icon: Icons.access_time_rounded,
+                                      text: "Normal",
+                                      iconColor: AppColors.iconColor2,)
+                                  ],
+                                )
+                                ],
+                              ),
+                              //third row of smaller box having three more columns - location time etc
+
+
+                            ),
+                      ))
                     ],
                   ),
                 );
 
               }),
-        )
-
-      ],
+              ],
     );
   }
   Widget _buildPageItem(int index)
