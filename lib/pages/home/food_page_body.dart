@@ -2,6 +2,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:stratos_cafe/utils/colors.dart';
 import 'package:stratos_cafe/utils/dimensions.dart';
+import 'package:stratos_cafe/widgets/app_column.dart';
 import 'package:stratos_cafe/widgets/big_texts.dart';
 import 'package:stratos_cafe/widgets/small_texts.dart';
 import '../../widgets/icon_and_text_widget.dart';
@@ -233,44 +234,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
               child: Container(
                 //smaller box margin
                 padding: EdgeInsets.only(top: Dimensions.height15, left: Dimensions.width30, right: Dimensions.width30),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    BigTexts(text: "MAHARASHTRIAN SPICE", ),
-                    SizedBox(height: Dimensions.height10,),
-                    Row(
-                      //rating stars and comments etc
-                      children: [
-                        //rating stars comments etc
-                        Wrap(
-                          children: List.generate(5, (index) => Icon(Icons.star, color: AppColors.mainColor)),
-                        ),
-                        SizedBox(width: Dimensions.width10,),
-                        SmallTexts(text: "4.5"),
-                        SizedBox(width: Dimensions.width10,),
-                        SmallTexts(text: "1287 "),
-                        SmallTexts(text: "Comments"),
-                      ],
-                    ),
-
-                    //third row of smaller box having three more columns - location time etc
-                    SizedBox(height: Dimensions.height20,),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        IconAndTextWidget(icon: Icons.circle_sharp,
-                          text: "1.7km",
-                          iconColor: AppColors.iconColor1,),
-                        IconAndTextWidget(icon: Icons.location_on,
-                          text: "Normal",
-                          iconColor: AppColors.mainColor,),
-                        IconAndTextWidget(icon: Icons.access_time_rounded,
-                          text: "Normal",
-                          iconColor: AppColors.iconColor2,)
-                      ],
-                    )
-                  ],
-                ),
+                child: AppColumn(text: "Kolhapuri Misal in Pune",),
               ),
             ),
           )
