@@ -28,7 +28,6 @@ class _FoodPageBodyState extends State<FoodPageBody> {
     setState(() {
       _currPageValue= pageController.page!;
       //print("Current value is "+_currPageValue.toString());
-
     });
     });
   }

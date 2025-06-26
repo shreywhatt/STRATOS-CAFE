@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:stratos_cafe/utils/dimensions.dart';
 
 class PopularFoodDetail extends StatelessWidget {
   const PopularFoodDetail({super.key});
@@ -13,12 +14,26 @@ class PopularFoodDetail extends StatelessWidget {
             right: 0,
             child: Container(
               width: double.maxFinite,
-              height: 350,
-                decoration: BoxDecoration(
+              height:Dimensions.popularFoodImgSize,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("assets/image/food0.png",),
+                      fit: BoxFit.cover,
+                  ),
 
-                ),,
+                ),
 
-          ))
+          )),
+          Positioned(
+            left: Dimensions.width20,
+            right: Dimensions.width20,
+              child: Row(
+                children: [
+
+                ],
+
+
+              ) ),
         ],
       ),
     );
