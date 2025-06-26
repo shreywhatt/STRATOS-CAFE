@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stratos_cafe/utils/dimensions.dart';
+import 'package:stratos_cafe/widgets/app_icon.dart';
 
 class PopularFoodDetail extends StatelessWidget {
   const PopularFoodDetail({super.key});
@@ -25,14 +26,15 @@ class PopularFoodDetail extends StatelessWidget {
 
           )),
           Positioned(
+            top: Dimensions.height45,
             left: Dimensions.width20,
             right: Dimensions.width20,
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-
+                  AppIcon(icon: Icons.arrow_back_ios),
+                  AppIcon(icon: Icons.shopping_cart_outlined)
                 ],
-
-
               ) ),
         ],
       ),

@@ -6,13 +6,13 @@ class BigTexts extends StatelessWidget {
   final String text;
   double size;
   TextOverflow overflow;
-  BigTexts({Key? key,
+  BigTexts({super.key,
     this.color = const Color(0xFF332d2b) ,
     required this.text,
     this.size=0 ,
     this.overflow=TextOverflow.ellipsis,
 
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
