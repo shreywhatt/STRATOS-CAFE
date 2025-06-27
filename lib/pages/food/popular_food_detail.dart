@@ -57,11 +57,21 @@ class PopularFoodDetail extends StatelessWidget {
                   ),
                   color: Colors.white,
                 ),
-                child: AppColumn(text: "Kolhapuri Misal in Pune",),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    AppColumn(text: "Kolhapuri Misal in Pune",),
+                    SizedBox(height: Dimensions.height20,),
+                    BigTexts(text: "Introduce"),
+                  ],
+                ),
 
           )),
         ],
       ),
-    );
+      bottomNavigationBar: Container(
+        height: 120,
+
+   ));
   }
 }
